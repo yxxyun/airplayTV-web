@@ -48,6 +48,10 @@
                     label="源1(cz)（质量较高，有时候需要cloudflare challenge）"/>
       </div>
       <div>
+        <q-checkbox size="md" @click="changeSource('sbb')" v-model="videoSource.sbb"
+                    label="源10(sbb)（如果效果不行请更换其他源）"/>
+      </div>
+      <div>
         <q-checkbox size="md" @click="changeSource('nn')" v-model="videoSource.nn"
                     label="源2(nn)（如果效果不行请更换其他源）"/>
       </div>
@@ -122,6 +126,7 @@ export default {
     return {
       videoSource: {
         cz: false,
+        sbb: false,
         hbo: false,
         nn: false,
         my: false,
